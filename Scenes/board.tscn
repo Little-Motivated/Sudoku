@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5cedfr4rpvat"]
+
+[ext_resource type="Texture2D" uid="uid://ccyesebpeuopi" path="res://Resourses/Sprites/Sudoku.png" id="1_7rn8h"]
+
+[node name="Board" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(325, 325)
+texture = ExtResource("1_7rn8h")
