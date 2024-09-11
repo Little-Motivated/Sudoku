@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c5cedfr4rpvat" path="res://Scenes/board.tscn" id="1_bw7q5"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_ff077"]
-[ext_resource type="PackedScene" uid="uid://d2boo8cqg7vkr" path="res://Scenes/test_text.tscn" id="3_dodbn"]
+[ext_resource type="FontFile" uid="uid://baoiypopi7avd" path="res://Resourses/Font/ChangaOne-Regular.ttf" id="4_i0amk"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_ff077")
@@ -10,8 +10,620 @@ script = ExtResource("1_ff077")
 [node name="Board" parent="." instance=ExtResource("1_bw7q5")]
 position = Vector2(59, 59)
 
-[node name="Test_Text" parent="." instance=ExtResource("3_dodbn")]
-offset_left = 161.0
-offset_top = 69.0
-offset_right = 592.0
-offset_bottom = 130.0
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="1" type="Button" parent="Buttons"]
+offset_left = 777.0
+offset_top = 252.0
+offset_right = 875.0
+offset_bottom = 367.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_focus_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 1 "
+
+[node name="2" type="Button" parent="Buttons"]
+offset_left = 910.0
+offset_top = 252.0
+offset_right = 1008.0
+offset_bottom = 367.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_focus_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 2 "
+
+[node name="3" type="Button" parent="Buttons"]
+offset_left = 1036.0
+offset_top = 252.0
+offset_right = 1134.0
+offset_bottom = 367.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_focus_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 3 "
+
+[node name="4" type="Button" parent="Buttons"]
+offset_left = 777.0
+offset_top = 403.0
+offset_right = 875.0
+offset_bottom = 518.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_focus_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 4 "
+
+[node name="5" type="Button" parent="Buttons"]
+offset_left = 910.0
+offset_top = 403.0
+offset_right = 1008.0
+offset_bottom = 518.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_focus_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 5 "
+
+[node name="6" type="Button" parent="Buttons"]
+offset_left = 1036.0
+offset_top = 403.0
+offset_right = 1134.0
+offset_bottom = 518.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_focus_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 6 "
+
+[node name="7" type="Button" parent="Buttons"]
+offset_left = 777.0
+offset_top = 555.0
+offset_right = 875.0
+offset_bottom = 670.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_focus_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 7 "
+
+[node name="8" type="Button" parent="Buttons"]
+offset_left = 910.0
+offset_top = 555.0
+offset_right = 1008.0
+offset_bottom = 670.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_focus_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 8 "
+
+[node name="9" type="Button" parent="Buttons"]
+offset_left = 1036.0
+offset_top = 555.0
+offset_right = 1134.0
+offset_bottom = 670.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_focus_color = Color(1, 0.933333, 0.8, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 9 "
+
+[node name="Numbers" type="Node2D" parent="."]
+
+[node name="1" type="Label" parent="Numbers"]
+offset_left = 66.0
+offset_top = 66.0
+offset_right = 136.0
+offset_bottom = 136.0
+
+[node name="2" type="Label" parent="Numbers"]
+offset_left = 136.0
+offset_top = 66.0
+offset_right = 206.0
+offset_bottom = 136.0
+
+[node name="3" type="Label" parent="Numbers"]
+offset_left = 206.0
+offset_top = 66.0
+offset_right = 276.0
+offset_bottom = 136.0
+
+[node name="4" type="Label" parent="Numbers"]
+offset_left = 279.0
+offset_top = 66.0
+offset_right = 349.0
+offset_bottom = 136.0
+
+[node name="5" type="Label" parent="Numbers"]
+offset_left = 349.0
+offset_top = 66.0
+offset_right = 419.0
+offset_bottom = 136.0
+
+[node name="6" type="Label" parent="Numbers"]
+offset_left = 419.0
+offset_top = 66.0
+offset_right = 489.0
+offset_bottom = 136.0
+
+[node name="7" type="Label" parent="Numbers"]
+offset_left = 492.0
+offset_top = 66.0
+offset_right = 562.0
+offset_bottom = 136.0
+
+[node name="8" type="Label" parent="Numbers"]
+offset_left = 562.0
+offset_top = 66.0
+offset_right = 632.0
+offset_bottom = 136.0
+
+[node name="9" type="Label" parent="Numbers"]
+offset_left = 632.0
+offset_top = 66.0
+offset_right = 702.0
+offset_bottom = 136.0
+
+[node name="10" type="Label" parent="Numbers"]
+offset_left = 66.0
+offset_top = 136.0
+offset_right = 136.0
+offset_bottom = 206.0
+
+[node name="11" type="Label" parent="Numbers"]
+offset_left = 136.0
+offset_top = 136.0
+offset_right = 206.0
+offset_bottom = 206.0
+
+[node name="12" type="Label" parent="Numbers"]
+offset_left = 206.0
+offset_top = 136.0
+offset_right = 276.0
+offset_bottom = 206.0
+
+[node name="13" type="Label" parent="Numbers"]
+offset_left = 279.0
+offset_top = 136.0
+offset_right = 349.0
+offset_bottom = 206.0
+
+[node name="14" type="Label" parent="Numbers"]
+offset_left = 349.0
+offset_top = 136.0
+offset_right = 419.0
+offset_bottom = 206.0
+
+[node name="15" type="Label" parent="Numbers"]
+offset_left = 419.0
+offset_top = 136.0
+offset_right = 489.0
+offset_bottom = 206.0
+
+[node name="16" type="Label" parent="Numbers"]
+offset_left = 492.0
+offset_top = 136.0
+offset_right = 562.0
+offset_bottom = 206.0
+
+[node name="17" type="Label" parent="Numbers"]
+offset_left = 562.0
+offset_top = 136.0
+offset_right = 632.0
+offset_bottom = 206.0
+
+[node name="18" type="Label" parent="Numbers"]
+offset_left = 632.0
+offset_top = 136.0
+offset_right = 702.0
+offset_bottom = 206.0
+
+[node name="19" type="Label" parent="Numbers"]
+offset_left = 66.0
+offset_top = 206.0
+offset_right = 136.0
+offset_bottom = 276.0
+
+[node name="20" type="Label" parent="Numbers"]
+offset_left = 136.0
+offset_top = 206.0
+offset_right = 206.0
+offset_bottom = 276.0
+
+[node name="21" type="Label" parent="Numbers"]
+offset_left = 206.0
+offset_top = 206.0
+offset_right = 276.0
+offset_bottom = 276.0
+
+[node name="22" type="Label" parent="Numbers"]
+offset_left = 279.0
+offset_top = 206.0
+offset_right = 349.0
+offset_bottom = 276.0
+
+[node name="23" type="Label" parent="Numbers"]
+offset_left = 349.0
+offset_top = 206.0
+offset_right = 419.0
+offset_bottom = 276.0
+
+[node name="24" type="Label" parent="Numbers"]
+offset_left = 419.0
+offset_top = 206.0
+offset_right = 489.0
+offset_bottom = 276.0
+
+[node name="25" type="Label" parent="Numbers"]
+offset_left = 492.0
+offset_top = 206.0
+offset_right = 562.0
+offset_bottom = 276.0
+
+[node name="26" type="Label" parent="Numbers"]
+offset_left = 562.0
+offset_top = 206.0
+offset_right = 632.0
+offset_bottom = 276.0
+
+[node name="27" type="Label" parent="Numbers"]
+offset_left = 632.0
+offset_top = 206.0
+offset_right = 702.0
+offset_bottom = 276.0
+
+[node name="28" type="Label" parent="Numbers"]
+offset_left = 66.0
+offset_top = 280.0
+offset_right = 136.0
+offset_bottom = 350.0
+
+[node name="29" type="Label" parent="Numbers"]
+offset_left = 136.0
+offset_top = 280.0
+offset_right = 206.0
+offset_bottom = 350.0
+
+[node name="30" type="Label" parent="Numbers"]
+offset_left = 206.0
+offset_top = 280.0
+offset_right = 276.0
+offset_bottom = 350.0
+
+[node name="31" type="Label" parent="Numbers"]
+offset_left = 279.0
+offset_top = 280.0
+offset_right = 349.0
+offset_bottom = 350.0
+
+[node name="32" type="Label" parent="Numbers"]
+offset_left = 349.0
+offset_top = 280.0
+offset_right = 419.0
+offset_bottom = 350.0
+
+[node name="33" type="Label" parent="Numbers"]
+offset_left = 419.0
+offset_top = 280.0
+offset_right = 489.0
+offset_bottom = 350.0
+
+[node name="34" type="Label" parent="Numbers"]
+offset_left = 492.0
+offset_top = 280.0
+offset_right = 562.0
+offset_bottom = 350.0
+
+[node name="35" type="Label" parent="Numbers"]
+offset_left = 562.0
+offset_top = 280.0
+offset_right = 632.0
+offset_bottom = 350.0
+
+[node name="36" type="Label" parent="Numbers"]
+offset_left = 632.0
+offset_top = 280.0
+offset_right = 702.0
+offset_bottom = 350.0
+
+[node name="37" type="Label" parent="Numbers"]
+offset_left = 66.0
+offset_top = 350.0
+offset_right = 136.0
+offset_bottom = 420.0
+
+[node name="38" type="Label" parent="Numbers"]
+offset_left = 136.0
+offset_top = 350.0
+offset_right = 206.0
+offset_bottom = 420.0
+
+[node name="39" type="Label" parent="Numbers"]
+offset_left = 206.0
+offset_top = 350.0
+offset_right = 276.0
+offset_bottom = 420.0
+
+[node name="40" type="Label" parent="Numbers"]
+offset_left = 279.0
+offset_top = 350.0
+offset_right = 349.0
+offset_bottom = 420.0
+
+[node name="41" type="Label" parent="Numbers"]
+offset_left = 349.0
+offset_top = 350.0
+offset_right = 419.0
+offset_bottom = 420.0
+
+[node name="42" type="Label" parent="Numbers"]
+offset_left = 419.0
+offset_top = 350.0
+offset_right = 489.0
+offset_bottom = 420.0
+
+[node name="43" type="Label" parent="Numbers"]
+offset_left = 492.0
+offset_top = 350.0
+offset_right = 562.0
+offset_bottom = 420.0
+
+[node name="44" type="Label" parent="Numbers"]
+offset_left = 562.0
+offset_top = 350.0
+offset_right = 632.0
+offset_bottom = 420.0
+
+[node name="45" type="Label" parent="Numbers"]
+offset_left = 632.0
+offset_top = 350.0
+offset_right = 702.0
+offset_bottom = 420.0
+
+[node name="46" type="Label" parent="Numbers"]
+offset_left = 66.0
+offset_top = 420.0
+offset_right = 136.0
+offset_bottom = 490.0
+
+[node name="47" type="Label" parent="Numbers"]
+offset_left = 136.0
+offset_top = 420.0
+offset_right = 206.0
+offset_bottom = 490.0
+
+[node name="48" type="Label" parent="Numbers"]
+offset_left = 206.0
+offset_top = 420.0
+offset_right = 276.0
+offset_bottom = 490.0
+
+[node name="49" type="Label" parent="Numbers"]
+offset_left = 279.0
+offset_top = 420.0
+offset_right = 349.0
+offset_bottom = 490.0
+
+[node name="50" type="Label" parent="Numbers"]
+offset_left = 349.0
+offset_top = 420.0
+offset_right = 419.0
+offset_bottom = 490.0
+
+[node name="51" type="Label" parent="Numbers"]
+offset_left = 419.0
+offset_top = 420.0
+offset_right = 489.0
+offset_bottom = 490.0
+
+[node name="52" type="Label" parent="Numbers"]
+offset_left = 492.0
+offset_top = 420.0
+offset_right = 562.0
+offset_bottom = 490.0
+
+[node name="53" type="Label" parent="Numbers"]
+offset_left = 562.0
+offset_top = 420.0
+offset_right = 632.0
+offset_bottom = 490.0
+
+[node name="54" type="Label" parent="Numbers"]
+offset_left = 632.0
+offset_top = 420.0
+offset_right = 702.0
+offset_bottom = 490.0
+
+[node name="55" type="Label" parent="Numbers"]
+offset_left = 66.0
+offset_top = 490.0
+offset_right = 136.0
+offset_bottom = 560.0
+
+[node name="56" type="Label" parent="Numbers"]
+offset_left = 136.0
+offset_top = 490.0
+offset_right = 206.0
+offset_bottom = 560.0
+
+[node name="57" type="Label" parent="Numbers"]
+offset_left = 206.0
+offset_top = 490.0
+offset_right = 276.0
+offset_bottom = 560.0
+
+[node name="58" type="Label" parent="Numbers"]
+offset_left = 279.0
+offset_top = 490.0
+offset_right = 349.0
+offset_bottom = 560.0
+
+[node name="59" type="Label" parent="Numbers"]
+offset_left = 349.0
+offset_top = 490.0
+offset_right = 419.0
+offset_bottom = 560.0
+
+[node name="60" type="Label" parent="Numbers"]
+offset_left = 419.0
+offset_top = 490.0
+offset_right = 489.0
+offset_bottom = 560.0
+
+[node name="61" type="Label" parent="Numbers"]
+offset_left = 492.0
+offset_top = 490.0
+offset_right = 562.0
+offset_bottom = 560.0
+
+[node name="62" type="Label" parent="Numbers"]
+offset_left = 562.0
+offset_top = 490.0
+offset_right = 632.0
+offset_bottom = 560.0
+
+[node name="63" type="Label" parent="Numbers"]
+offset_left = 632.0
+offset_top = 490.0
+offset_right = 702.0
+offset_bottom = 560.0
+
+[node name="64" type="Label" parent="Numbers"]
+offset_left = 66.0
+offset_top = 563.0
+offset_right = 136.0
+offset_bottom = 633.0
+
+[node name="65" type="Label" parent="Numbers"]
+offset_left = 136.0
+offset_top = 563.0
+offset_right = 206.0
+offset_bottom = 633.0
+
+[node name="66" type="Label" parent="Numbers"]
+offset_left = 206.0
+offset_top = 563.0
+offset_right = 276.0
+offset_bottom = 633.0
+
+[node name="67" type="Label" parent="Numbers"]
+offset_left = 279.0
+offset_top = 563.0
+offset_right = 349.0
+offset_bottom = 633.0
+
+[node name="68" type="Label" parent="Numbers"]
+offset_left = 349.0
+offset_top = 563.0
+offset_right = 419.0
+offset_bottom = 633.0
+
+[node name="69" type="Label" parent="Numbers"]
+offset_left = 419.0
+offset_top = 563.0
+offset_right = 489.0
+offset_bottom = 633.0
+
+[node name="70" type="Label" parent="Numbers"]
+offset_left = 492.0
+offset_top = 563.0
+offset_right = 562.0
+offset_bottom = 633.0
+
+[node name="71" type="Label" parent="Numbers"]
+offset_left = 562.0
+offset_top = 563.0
+offset_right = 632.0
+offset_bottom = 633.0
+
+[node name="72" type="Label" parent="Numbers"]
+offset_left = 632.0
+offset_top = 563.0
+offset_right = 702.0
+offset_bottom = 633.0
+
+[node name="73" type="Label" parent="Numbers"]
+offset_left = 66.0
+offset_top = 633.0
+offset_right = 136.0
+offset_bottom = 703.0
+
+[node name="74" type="Label" parent="Numbers"]
+offset_left = 136.0
+offset_top = 633.0
+offset_right = 206.0
+offset_bottom = 703.0
+
+[node name="75" type="Label" parent="Numbers"]
+offset_left = 206.0
+offset_top = 633.0
+offset_right = 276.0
+offset_bottom = 703.0
+
+[node name="76" type="Label" parent="Numbers"]
+offset_left = 279.0
+offset_top = 633.0
+offset_right = 349.0
+offset_bottom = 703.0
+
+[node name="77" type="Label" parent="Numbers"]
+offset_left = 349.0
+offset_top = 633.0
+offset_right = 419.0
+offset_bottom = 703.0
+
+[node name="78" type="Label" parent="Numbers"]
+offset_left = 419.0
+offset_top = 633.0
+offset_right = 489.0
+offset_bottom = 703.0
+
+[node name="79" type="Label" parent="Numbers"]
+offset_left = 492.0
+offset_top = 633.0
+offset_right = 562.0
+offset_bottom = 703.0
+
+[node name="80" type="Label" parent="Numbers"]
+offset_left = 562.0
+offset_top = 633.0
+offset_right = 632.0
+offset_bottom = 703.0
+
+[node name="81" type="Label" parent="Numbers"]
+offset_left = 632.0
+offset_top = 633.0
+offset_right = 702.0
+offset_bottom = 703.0
+
+[connection signal="pressed" from="Buttons/1" to="." method="_on__pressed"]

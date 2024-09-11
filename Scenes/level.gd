@@ -20,10 +20,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#print(get_global_mouse_position())
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		if self.get_viewport_rect().has_point(get_global_mouse_position()):
-			pass
-			# print("gddfsdg")
+	if Input.is_physical_key_pressed(KEY_1):
+		print("1111")
+	else:
+		pass
+		
 
 
 func _input(event: InputEvent) -> void:
@@ -39,3 +40,9 @@ func _input(event: InputEvent) -> void:
 				yy = (yy - 66) / 70;
 				print(xx);
 				print(yy);
+				active = [yy,xx]
+
+
+func _on__pressed() -> void:
+	
+	
