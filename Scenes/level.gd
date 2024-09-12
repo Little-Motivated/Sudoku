@@ -21,10 +21,32 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#print(get_global_mouse_position())
-	if Input.is_physical_key_pressed(KEY_1):
-		print("1111")
-	else:
-		pass
+	if Input.is_action_just_pressed("1"):
+		_on__pressed_1();
+	
+	if Input.is_action_just_pressed("2"):
+		_on__pressed_2();
+	
+	if Input.is_action_just_pressed("3"):
+		_on__pressed_3();
+	
+	if Input.is_action_just_pressed("4"):
+		_on__pressed_4();
+	
+	if Input.is_action_just_pressed("5"):
+		_on__pressed_5();
+	
+	if Input.is_action_just_pressed("6"):
+		_on__pressed_6();
+	
+	if Input.is_action_just_pressed("7"):
+		_on__pressed_7();
+	
+	if Input.is_action_just_pressed("8"):
+		_on__pressed_8();
+	
+	if Input.is_action_just_pressed("9"):
+		_on__pressed_9();
 		
 
 
@@ -47,47 +69,38 @@ func _input(event: InputEvent) -> void:
 				print(get_node("Numbersdvsa"))
 
 
-
 func _on__pressed_1() -> void:
 	if is_instance_valid(active):
 		active.text = " 1 "
 		print("asdaf")
 
-
 func _on__pressed_2() -> void:
 	if is_instance_valid(active):
 		active.text = " 2 "
-
 
 func _on__pressed_3() -> void:
 	if is_instance_valid(active):
 		active.text = " 3 "
 
-
 func _on__pressed_4() -> void:
 	if is_instance_valid(active):
 		active.text = " 4 "
-
 
 func _on__pressed_5() -> void:
 	if is_instance_valid(active):
 		active.text = " 5 "
 
-
 func _on__pressed_6() -> void:
 	if is_instance_valid(active):
 		active.text = " 6 "
-
 
 func _on__pressed_7() -> void:
 	if is_instance_valid(active):
 		active.text = " 7 "
 
-
 func _on__pressed_8() -> void:
 	if is_instance_valid(active):
 		active.text = " 8 "
-
 
 func _on__pressed_9() -> void:
 	if is_instance_valid(active):
