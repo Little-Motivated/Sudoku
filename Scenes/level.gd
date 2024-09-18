@@ -20,7 +20,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#print(get_global_mouse_position())
+	#region Обработка ввода с клавиатуры
 	if Input.is_action_just_pressed("1"):
 		_on__pressed_1();
 	
@@ -47,6 +47,10 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("9"):
 		_on__pressed_9();
+	
+	if Input.is_action_just_pressed("Backspace"):
+		_on__pressed_backspace();
+	#endregion
 		
 
 
@@ -65,14 +69,16 @@ func _input(event: InputEvent) -> void:
 				print(yy);
 				var num = yy * 9 + xx + 1
 				active = get_node("Numbers/" + str(num))
+				$Selected.position = active.position
 				print(active)
-				print(get_node("Numbersdvsa"))
 
 
+#region Сигналы с кнопок
 func _on__pressed_1() -> void:
 	if is_instance_valid(active):
 		active.text = " 1 "
-		print("asdaf")
+		var select = Sprite2D;
+		
 
 func _on__pressed_2() -> void:
 	if is_instance_valid(active):
@@ -105,3 +111,8 @@ func _on__pressed_8() -> void:
 func _on__pressed_9() -> void:
 	if is_instance_valid(active):
 		active.text = " 9 "
+
+func _on__pressed_backspace() -> void:
+	if is_instance_valid(active):
+		active.text = ""
+#endregion

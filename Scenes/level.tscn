@@ -1,14 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://4m2kab6k7g37"]
+[gd_scene load_steps=6 format=3 uid="uid://4m2kab6k7g37"]
 
 [ext_resource type="PackedScene" uid="uid://c5cedfr4rpvat" path="res://Scenes/board.tscn" id="1_bw7q5"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_ff077"]
+[ext_resource type="Texture2D" uid="uid://daydk3cu8vsf5" path="res://Resourses/Sprites/Bg.png" id="2_xvlxx"]
 [ext_resource type="FontFile" uid="uid://baoiypopi7avd" path="res://Resourses/Font/ChangaOne-Regular.ttf" id="4_i0amk"]
+[ext_resource type="PackedScene" uid="uid://c7gngb4qsblx5" path="res://Scenes/selected.tscn" id="4_l1yg7"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_ff077")
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(690, 385.5)
+scale = Vector2(93.125, 53.5625)
+texture = ExtResource("2_xvlxx")
+
 [node name="Board" parent="." instance=ExtResource("1_bw7q5")]
 position = Vector2(59, 59)
+
+[node name="Selected" parent="." instance=ExtResource("4_l1yg7")]
+position = Vector2(-150, 74)
 
 [node name="Buttons" type="Node2D" parent="."]
 
@@ -22,6 +32,7 @@ theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
 theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
 theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_colors/font_outline_color = Color(0.800491, 0.800491, 0.800491, 1)
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 100
 text = " 1 "
@@ -138,14 +149,29 @@ theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 100
 text = " 9 "
 
+[node name="Backspace" type="Button" parent="Buttons"]
+offset_left = 777.0
+offset_top = 89.0
+offset_right = 966.0
+offset_bottom = 203.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 90
+text = "  ⌫  "
+alignment = 0
+
 [node name="Numbers" type="Node2D" parent="."]
-position = Vector2(4, -4)
+position = Vector2(3, -5)
 
 [node name="1" type="Label" parent="Numbers"]
 offset_left = 66.0
 offset_top = 66.0
 offset_right = 136.0
-offset_bottom = 136.0
+offset_bottom = 141.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
@@ -156,6 +182,7 @@ offset_top = 66.0
 offset_right = 206.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -165,6 +192,7 @@ offset_top = 66.0
 offset_right = 276.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -174,6 +202,7 @@ offset_top = 66.0
 offset_right = 349.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -183,6 +212,7 @@ offset_top = 66.0
 offset_right = 419.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -192,6 +222,7 @@ offset_top = 66.0
 offset_right = 489.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -201,6 +232,7 @@ offset_top = 66.0
 offset_right = 562.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -210,6 +242,7 @@ offset_top = 66.0
 offset_right = 632.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -219,6 +252,7 @@ offset_top = 66.0
 offset_right = 702.0
 offset_bottom = 136.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -228,6 +262,7 @@ offset_top = 136.0
 offset_right = 136.0
 offset_bottom = 206.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -237,6 +272,7 @@ offset_top = 136.0
 offset_right = 206.0
 offset_bottom = 206.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -246,6 +282,7 @@ offset_top = 136.0
 offset_right = 276.0
 offset_bottom = 206.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -255,6 +292,7 @@ offset_top = 136.0
 offset_right = 349.0
 offset_bottom = 206.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -264,6 +302,7 @@ offset_top = 136.0
 offset_right = 419.0
 offset_bottom = 206.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -273,6 +312,7 @@ offset_top = 136.0
 offset_right = 489.0
 offset_bottom = 206.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -282,6 +322,7 @@ offset_top = 136.0
 offset_right = 562.0
 offset_bottom = 206.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -291,6 +332,7 @@ offset_top = 136.0
 offset_right = 632.0
 offset_bottom = 206.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -300,6 +342,7 @@ offset_top = 136.0
 offset_right = 702.0
 offset_bottom = 206.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -309,6 +352,7 @@ offset_top = 206.0
 offset_right = 136.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -318,6 +362,7 @@ offset_top = 206.0
 offset_right = 206.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -327,6 +372,7 @@ offset_top = 206.0
 offset_right = 276.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -336,6 +382,7 @@ offset_top = 206.0
 offset_right = 349.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -345,6 +392,7 @@ offset_top = 206.0
 offset_right = 419.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -354,6 +402,7 @@ offset_top = 206.0
 offset_right = 489.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -363,6 +412,7 @@ offset_top = 206.0
 offset_right = 562.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -372,6 +422,7 @@ offset_top = 206.0
 offset_right = 632.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -381,6 +432,7 @@ offset_top = 206.0
 offset_right = 702.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -390,6 +442,7 @@ offset_top = 280.0
 offset_right = 136.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -399,6 +452,7 @@ offset_top = 280.0
 offset_right = 206.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -408,6 +462,7 @@ offset_top = 280.0
 offset_right = 276.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -417,6 +472,7 @@ offset_top = 280.0
 offset_right = 349.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -426,6 +482,7 @@ offset_top = 280.0
 offset_right = 419.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -435,6 +492,7 @@ offset_top = 280.0
 offset_right = 489.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -444,6 +502,7 @@ offset_top = 280.0
 offset_right = 562.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -453,6 +512,7 @@ offset_top = 280.0
 offset_right = 632.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -462,6 +522,7 @@ offset_top = 280.0
 offset_right = 702.0
 offset_bottom = 350.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -471,6 +532,7 @@ offset_top = 350.0
 offset_right = 136.0
 offset_bottom = 420.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -480,6 +542,7 @@ offset_top = 350.0
 offset_right = 206.0
 offset_bottom = 420.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -489,6 +552,7 @@ offset_top = 350.0
 offset_right = 276.0
 offset_bottom = 420.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -498,6 +562,7 @@ offset_top = 350.0
 offset_right = 349.0
 offset_bottom = 420.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -507,6 +572,7 @@ offset_top = 350.0
 offset_right = 419.0
 offset_bottom = 420.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -516,6 +582,7 @@ offset_top = 350.0
 offset_right = 489.0
 offset_bottom = 420.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -525,6 +592,7 @@ offset_top = 350.0
 offset_right = 562.0
 offset_bottom = 420.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -534,6 +602,7 @@ offset_top = 350.0
 offset_right = 632.0
 offset_bottom = 420.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -543,6 +612,7 @@ offset_top = 350.0
 offset_right = 702.0
 offset_bottom = 420.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -552,6 +622,7 @@ offset_top = 420.0
 offset_right = 136.0
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -561,6 +632,7 @@ offset_top = 420.0
 offset_right = 206.0
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -570,6 +642,7 @@ offset_top = 420.0
 offset_right = 276.0
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -579,6 +652,7 @@ offset_top = 420.0
 offset_right = 349.0
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -588,6 +662,7 @@ offset_top = 420.0
 offset_right = 419.0
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -597,6 +672,7 @@ offset_top = 420.0
 offset_right = 489.0
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -606,6 +682,7 @@ offset_top = 420.0
 offset_right = 562.0
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -615,6 +692,7 @@ offset_top = 420.0
 offset_right = 632.0
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -624,6 +702,7 @@ offset_top = 420.0
 offset_right = 702.0
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -633,6 +712,7 @@ offset_top = 490.0
 offset_right = 136.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -642,6 +722,7 @@ offset_top = 490.0
 offset_right = 206.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -651,6 +732,7 @@ offset_top = 490.0
 offset_right = 276.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -660,6 +742,7 @@ offset_top = 490.0
 offset_right = 349.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -669,6 +752,7 @@ offset_top = 490.0
 offset_right = 419.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -678,6 +762,7 @@ offset_top = 490.0
 offset_right = 489.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -687,6 +772,7 @@ offset_top = 490.0
 offset_right = 562.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -696,6 +782,7 @@ offset_top = 490.0
 offset_right = 632.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -705,6 +792,7 @@ offset_top = 490.0
 offset_right = 702.0
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -714,6 +802,7 @@ offset_top = 563.0
 offset_right = 136.0
 offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -723,6 +812,7 @@ offset_top = 563.0
 offset_right = 206.0
 offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -732,6 +822,7 @@ offset_top = 563.0
 offset_right = 276.0
 offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -741,6 +832,7 @@ offset_top = 563.0
 offset_right = 349.0
 offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -750,6 +842,7 @@ offset_top = 563.0
 offset_right = 419.0
 offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -759,6 +852,7 @@ offset_top = 563.0
 offset_right = 489.0
 offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -768,6 +862,7 @@ offset_top = 563.0
 offset_right = 562.0
 offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -777,6 +872,7 @@ offset_top = 563.0
 offset_right = 632.0
 offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -786,6 +882,7 @@ offset_top = 563.0
 offset_right = 702.0
 offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -795,6 +892,7 @@ offset_top = 633.0
 offset_right = 136.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -804,6 +902,7 @@ offset_top = 633.0
 offset_right = 206.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -813,6 +912,7 @@ offset_top = 633.0
 offset_right = 276.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -822,6 +922,7 @@ offset_top = 633.0
 offset_right = 349.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -831,6 +932,7 @@ offset_top = 633.0
 offset_right = 419.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -840,6 +942,7 @@ offset_top = 633.0
 offset_right = 489.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -849,6 +952,7 @@ offset_top = 633.0
 offset_right = 562.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -858,6 +962,7 @@ offset_top = 633.0
 offset_right = 632.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -867,6 +972,7 @@ offset_top = 633.0
 offset_right = 702.0
 offset_bottom = 703.0
 theme_override_colors/font_color = Color(0.27451, 0.258824, 0.368627, 1)
+theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
@@ -879,3 +985,4 @@ theme_override_font_sizes/font_size = 70
 [connection signal="pressed" from="Buttons/7" to="." method="_on__pressed_7"]
 [connection signal="pressed" from="Buttons/8" to="." method="_on__pressed_8"]
 [connection signal="pressed" from="Buttons/9" to="." method="_on__pressed_9"]
+[connection signal="pressed" from="Buttons/Backspace" to="." method="_on__pressed_backspace"]
