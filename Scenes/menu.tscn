@@ -1,3 +1,68 @@
-[gd_scene format=3 uid="uid://c6h0owghoybho"]
+[gd_scene load_steps=6 format=3 uid="uid://c6h0owghoybho"]
+
+[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_2jn8u"]
+[ext_resource type="Texture2D" uid="uid://cyib87pbhe1n6" path="res://Resourses/Sprites/Play_icon.png" id="1_tuujp"]
+[ext_resource type="Texture2D" uid="uid://b2x06p1k4chik" path="res://Resourses/Sprites/Difficulty/ru_easy.png" id="3_cufai"]
+[ext_resource type="Texture2D" uid="uid://c4skgoxrbrgf3" path="res://Resourses/Sprites/Difficulty/ru_medium.png" id="4_smkqx"]
+[ext_resource type="Texture2D" uid="uid://dmoa4he7rm3ub" path="res://Resourses/Sprites/Difficulty/ru_hard.png" id="5_bfx7s"]
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_2jn8u")
+
+[node name="Play_button" type="Node2D" parent="."]
+position = Vector2(648, 253)
+
+[node name="Play" type="Button" parent="Play_button"]
+offset_left = -69.0
+offset_top = -77.0
+offset_right = 70.0
+offset_bottom = 78.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Play_button"]
+scale = Vector2(0.541934, 0.541935)
+texture = ExtResource("1_tuujp")
+
+[node name="Easy" type="Node2D" parent="."]
+position = Vector2(322, 558)
+scale = Vector2(0.5, 0.5)
+
+[node name="Button" type="Button" parent="Easy"]
+offset_left = -256.0
+offset_top = -128.0
+offset_right = 256.0
+offset_bottom = 128.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Easy"]
+texture = ExtResource("3_cufai")
+
+[node name="Medium" type="Node2D" parent="."]
+position = Vector2(677, 558)
+scale = Vector2(0.5, 0.5)
+
+[node name="Button" type="Button" parent="Medium"]
+offset_left = -256.0
+offset_top = -128.0
+offset_right = 256.0
+offset_bottom = 128.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Medium"]
+texture = ExtResource("4_smkqx")
+
+[node name="Hard" type="Node2D" parent="."]
+position = Vector2(1037, 558)
+scale = Vector2(0.5, 0.5)
+
+[node name="Button" type="Button" parent="Hard"]
+offset_left = -256.0
+offset_top = -128.0
+offset_right = 256.0
+offset_bottom = 128.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Hard"]
+texture = ExtResource("5_bfx7s")
+
+[connection signal="button_up" from="Play_button/Play" to="." method="_on_play_button_up"]
