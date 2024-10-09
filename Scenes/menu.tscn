@@ -1,13 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6h0owghoybho"]
+[gd_scene load_steps=7 format=3 uid="uid://c6h0owghoybho"]
 
 [ext_resource type="Script" path="res://Scenes/menu.gd" id="1_2jn8u"]
 [ext_resource type="Texture2D" uid="uid://cyib87pbhe1n6" path="res://Resourses/Sprites/Play_icon.png" id="1_tuujp"]
+[ext_resource type="Texture2D" uid="uid://daydk3cu8vsf5" path="res://Resourses/Sprites/Bg.png" id="2_r6qi4"]
 [ext_resource type="Texture2D" uid="uid://b2x06p1k4chik" path="res://Resourses/Sprites/Difficulty/ru_easy.png" id="3_cufai"]
 [ext_resource type="Texture2D" uid="uid://c4skgoxrbrgf3" path="res://Resourses/Sprites/Difficulty/ru_medium.png" id="4_smkqx"]
 [ext_resource type="Texture2D" uid="uid://dmoa4he7rm3ub" path="res://Resourses/Sprites/Difficulty/ru_hard.png" id="5_bfx7s"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_2jn8u")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1091, 535.5)
+scale = Vector2(349.375, 199.187)
+texture = ExtResource("2_r6qi4")
 
 [node name="Play_button" type="Node2D" parent="."]
 position = Vector2(648, 253)
@@ -32,6 +38,10 @@ offset_left = -256.0
 offset_top = -128.0
 offset_right = 256.0
 offset_bottom = 128.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Easy"]
@@ -46,6 +56,10 @@ offset_left = -256.0
 offset_top = -128.0
 offset_right = 256.0
 offset_bottom = 128.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Medium"]
@@ -60,9 +74,15 @@ offset_left = -256.0
 offset_top = -128.0
 offset_right = 256.0
 offset_bottom = 128.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Hard"]
 texture = ExtResource("5_bfx7s")
 
-[connection signal="button_up" from="Play_button/Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Easy/Button" to="." method="_easy_button"]
+[connection signal="button_up" from="Medium/Button" to="." method="_medium_button"]
+[connection signal="button_up" from="Hard/Button" to="." method="_hard_button"]

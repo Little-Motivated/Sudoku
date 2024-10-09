@@ -1,6 +1,20 @@
 extends Node2D
 
-var board = [[-1,-1,-1,-1,-1,-1,-1,-1,-1],
+@export var diff = "Easy"
+
+@export var need_change = false
+
+@export var board = [["-1","-1","-1","-1","-1","-1","-1","-1","-1"],
+					 ["-1","-1","-1","-1","-1","-1","-1","-1","-1"],
+					 ["-1","-1","-1","-1","-1","-1","-1","-1","-1"],
+					 ["-1","-1","-1","-1","-1","-1","-1","-1","-1"],
+					 ["-1","-1","-1","-1","-1","-1","-1","-1","-1"],
+					 ["-1","-1","-1","-1","-1","-1","-1","-1","-1"],
+					 ["-1","-1","-1","-1","-1","-1","-1","-1","-1"],
+					 ["-1","-1","-1","-1","-1","-1","-1","-1","-1"],
+					 ["-1","-1","-1","-1","-1","-1","-1","-1","-1"]]
+
+var change = [[-1,-1,-1,-1,-1,-1,-1,-1,-1],
 		 	 [-1,-1,-1,-1,-1,-1,-1,-1,-1],
 			 [-1,-1,-1,-1,-1,-1,-1,-1,-1],
 			 [-1,-1,-1,-1,-1,-1,-1,-1,-1],
@@ -12,14 +26,34 @@ var board = [[-1,-1,-1,-1,-1,-1,-1,-1,-1],
 
 # var active = [-1,-1]
 var active
+var active_pos
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
+	$Buttons/Back/Back.modulate = Color(1, 1, 1, 0)
+	$Quit_or_not/Yes.modulate = Color(1, 1, 1, 0)
+	$Quit_or_not/No.modulate = Color(1, 1, 1, 0)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
+	if position.x <= 1366 and need_change == true:
+		need_change = false
+		for xx in range(0, 9):
+			for yy in range(0, 9):
+				var num = yy * 9 + xx + 1
+				var cur = get_node("Numbers/" + str(num))
+				if(board[xx][yy] != "."):
+					cur.text = " " + str(board[xx][yy]) + " "
+					
+					cur.set("theme_override_colors/font_color", Color(0.275, 0.259, 0.369, 255))
+					change[xx][yy] = 0
+					#cur.theme_override_colors/font_color = Color(70, 66, 94, 255)
+				else:
+					cur.text = ""
+					change[xx][yy] = 1
+					cur.set("theme_override_colors/font_color", Color("#7f58b9"))
+	
 	#region Обработка ввода с клавиатуры
 	if Input.is_action_just_pressed("1"):
 		_on__pressed_1();
@@ -69,50 +103,98 @@ func _input(event: InputEvent) -> void:
 				print(yy);
 				var num = yy * 9 + xx + 1
 				active = get_node("Numbers/" + str(num))
-				$Selected.position = active.position
+				active_pos = [xx,yy]
+				#$Selected.position = active.position
 				print(active)
 
 
 #region Сигналы с кнопок
 func _on__pressed_1() -> void:
 	if is_instance_valid(active):
-		active.text = " 1 "
-		var select = Sprite2D;
+		var xx = active_pos[0]
+		var yy = active_pos[1]
 		
+		if change[xx][yy] == 1:
+			active.text = " 1 "
 
 func _on__pressed_2() -> void:
 	if is_instance_valid(active):
-		active.text = " 2 "
+		var xx = active_pos[0]
+		var yy = active_pos[1]
+		
+		if change[xx][yy] == 1:
+			active.text = " 2 "
 
 func _on__pressed_3() -> void:
 	if is_instance_valid(active):
-		active.text = " 3 "
+		var xx = active_pos[0]
+		var yy = active_pos[1]
+		
+		if change[xx][yy] == 1:
+			active.text = " 3 "
 
 func _on__pressed_4() -> void:
 	if is_instance_valid(active):
-		active.text = " 4 "
+		var xx = active_pos[0]
+		var yy = active_pos[1]
+		
+		if change[xx][yy] == 1:
+			active.text = " 4 "
 
 func _on__pressed_5() -> void:
 	if is_instance_valid(active):
-		active.text = " 5 "
+		var xx = active_pos[0]
+		var yy = active_pos[1]
+		
+		if change[xx][yy] == 1:
+			active.text = " 5 "
 
 func _on__pressed_6() -> void:
 	if is_instance_valid(active):
-		active.text = " 6 "
+		var xx = active_pos[0]
+		var yy = active_pos[1]
+		
+		if change[xx][yy] == 1:
+			active.text = " 6 "
 
 func _on__pressed_7() -> void:
 	if is_instance_valid(active):
-		active.text = " 7 "
+		var xx = active_pos[0]
+		var yy = active_pos[1]
+		
+		if change[xx][yy] == 1:
+			active.text = " 7 "
 
 func _on__pressed_8() -> void:
 	if is_instance_valid(active):
-		active.text = " 8 "
+		var xx = active_pos[0]
+		var yy = active_pos[1]
+		
+		if change[xx][yy] == 1:
+			active.text = " 8 "
 
 func _on__pressed_9() -> void:
 	if is_instance_valid(active):
-		active.text = " 9 "
+		var xx = active_pos[0]
+		var yy = active_pos[1]
+		
+		if change[xx][yy] == 1:
+			active.text = " 9 "
 
 func _on__pressed_backspace() -> void:
 	if is_instance_valid(active):
 		active.text = ""
 #endregion
+
+
+func _back_button() -> void:
+	$"../Swipe".play("Menu_level_swipe_rev")
+	$Quit_or_not.visible = false
+
+
+func _on_back_button_up() -> void:
+	$Quit_or_not.visible = true
+
+
+func _on_no_button_down() -> void:
+	$Quit_or_not.visible = false

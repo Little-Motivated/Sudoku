@@ -1,0 +1,113 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgs6yfssd8d3r"]
+
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_1kuv3"]
+[ext_resource type="PackedScene" uid="uid://4m2kab6k7g37" path="res://Scenes/level.tscn" id="1_csi7q"]
+[ext_resource type="PackedScene" uid="uid://c6h0owghoybho" path="res://Scenes/menu.tscn" id="2_toy5x"]
+
+[sub_resource type="Animation" id="Animation_hvah5"]
+resource_name = "Menu_level_swipe"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(0.2, 5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1366, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(0.2, 5),
+"update": 0,
+"values": [Vector2(1366, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6u75t"]
+resource_name = "Menu_level_swipe_rev"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(0.2, 5),
+"update": 0,
+"values": [Vector2(-1366, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(0.2, 5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1366, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ukx46"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1700, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0gjtf"]
+_data = {
+"Menu_level_swipe": SubResource("Animation_hvah5"),
+"Menu_level_swipe_rev": SubResource("Animation_6u75t"),
+"RESET": SubResource("Animation_ukx46")
+}
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_1kuv3")
+
+[node name="Menu" parent="." instance=ExtResource("2_toy5x")]
+
+[node name="Level" parent="." instance=ExtResource("1_csi7q")]
+position = Vector2(1700, 0)
+
+[node name="Swipe" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0gjtf")
+}
+speed_scale = 1.2
+
+[node name="Swipe_rev" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0gjtf")
+}
+speed_scale = 1.2

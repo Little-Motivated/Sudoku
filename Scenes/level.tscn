@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://4m2kab6k7g37"]
+[gd_scene load_steps=8 format=3 uid="uid://4m2kab6k7g37"]
 
 [ext_resource type="PackedScene" uid="uid://c5cedfr4rpvat" path="res://Scenes/board.tscn" id="1_bw7q5"]
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_ff077"]
 [ext_resource type="Texture2D" uid="uid://daydk3cu8vsf5" path="res://Resourses/Sprites/Bg.png" id="2_xvlxx"]
 [ext_resource type="FontFile" uid="uid://baoiypopi7avd" path="res://Resourses/Font/ChangaOne-Regular.ttf" id="4_i0amk"]
-[ext_resource type="PackedScene" uid="uid://c7gngb4qsblx5" path="res://Scenes/selected.tscn" id="4_l1yg7"]
+[ext_resource type="Texture2D" uid="uid://cyejs8k18ovx4" path="res://Resourses/Sprites/Erase_button.png" id="5_ut6qa"]
+[ext_resource type="Texture2D" uid="uid://626bi6spvdmm" path="res://Resourses/Sprites/Back_button.png" id="6_difr3"]
+[ext_resource type="Texture2D" uid="uid://bq55hfj4gk3gm" path="res://Resourses/Sprites/Qiut_or_not.png" id="7_rx17c"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_ff077")
@@ -16,153 +18,6 @@ texture = ExtResource("2_xvlxx")
 
 [node name="Board" parent="." instance=ExtResource("1_bw7q5")]
 position = Vector2(59, 59)
-
-[node name="Selected" parent="." instance=ExtResource("4_l1yg7")]
-position = Vector2(-150, 74)
-
-[node name="Buttons" type="Node2D" parent="."]
-
-[node name="1" type="Button" parent="Buttons"]
-offset_left = 777.0
-offset_top = 252.0
-offset_right = 875.0
-offset_bottom = 367.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_colors/font_outline_color = Color(0.800491, 0.800491, 0.800491, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 100
-text = " 1 "
-
-[node name="2" type="Button" parent="Buttons"]
-offset_left = 910.0
-offset_top = 252.0
-offset_right = 1008.0
-offset_bottom = 367.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 100
-text = " 2 "
-
-[node name="3" type="Button" parent="Buttons"]
-offset_left = 1036.0
-offset_top = 252.0
-offset_right = 1134.0
-offset_bottom = 367.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 100
-text = " 3 "
-
-[node name="4" type="Button" parent="Buttons"]
-offset_left = 777.0
-offset_top = 403.0
-offset_right = 875.0
-offset_bottom = 518.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 100
-text = " 4 "
-
-[node name="5" type="Button" parent="Buttons"]
-offset_left = 910.0
-offset_top = 403.0
-offset_right = 1008.0
-offset_bottom = 518.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 100
-text = " 5 "
-
-[node name="6" type="Button" parent="Buttons"]
-offset_left = 1036.0
-offset_top = 403.0
-offset_right = 1134.0
-offset_bottom = 518.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 100
-text = " 6 "
-
-[node name="7" type="Button" parent="Buttons"]
-offset_left = 777.0
-offset_top = 555.0
-offset_right = 875.0
-offset_bottom = 670.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 100
-text = " 7 "
-
-[node name="8" type="Button" parent="Buttons"]
-offset_left = 910.0
-offset_top = 555.0
-offset_right = 1008.0
-offset_bottom = 670.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 100
-text = " 8 "
-
-[node name="9" type="Button" parent="Buttons"]
-offset_left = 1036.0
-offset_top = 555.0
-offset_right = 1134.0
-offset_bottom = 670.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 100
-text = " 9 "
-
-[node name="Backspace" type="Button" parent="Buttons"]
-offset_left = 777.0
-offset_top = 89.0
-offset_right = 966.0
-offset_bottom = 203.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
-theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
-theme_override_fonts/font = ExtResource("4_i0amk")
-theme_override_font_sizes/font_size = 90
-text = "  ⌫  "
-alignment = 0
 
 [node name="Numbers" type="Node2D" parent="."]
 position = Vector2(3, -5)
@@ -976,6 +831,196 @@ theme_override_constants/shadow_outline_size = 100
 theme_override_fonts/font = ExtResource("4_i0amk")
 theme_override_font_sizes/font_size = 70
 
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="1" type="Button" parent="Buttons"]
+offset_left = 777.0
+offset_top = 252.0
+offset_right = 875.0
+offset_bottom = 367.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_colors/font_outline_color = Color(0.800491, 0.800491, 0.800491, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 1 "
+
+[node name="2" type="Button" parent="Buttons"]
+offset_left = 910.0
+offset_top = 252.0
+offset_right = 1008.0
+offset_bottom = 367.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 2 "
+
+[node name="3" type="Button" parent="Buttons"]
+offset_left = 1036.0
+offset_top = 252.0
+offset_right = 1134.0
+offset_bottom = 367.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 3 "
+
+[node name="4" type="Button" parent="Buttons"]
+offset_left = 777.0
+offset_top = 403.0
+offset_right = 875.0
+offset_bottom = 518.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 4 "
+
+[node name="5" type="Button" parent="Buttons"]
+offset_left = 910.0
+offset_top = 403.0
+offset_right = 1008.0
+offset_bottom = 518.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 5 "
+
+[node name="6" type="Button" parent="Buttons"]
+offset_left = 1036.0
+offset_top = 403.0
+offset_right = 1134.0
+offset_bottom = 518.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 6 "
+
+[node name="7" type="Button" parent="Buttons"]
+offset_left = 777.0
+offset_top = 555.0
+offset_right = 875.0
+offset_bottom = 670.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 7 "
+
+[node name="8" type="Button" parent="Buttons"]
+offset_left = 910.0
+offset_top = 555.0
+offset_right = 1008.0
+offset_bottom = 670.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 8 "
+
+[node name="9" type="Button" parent="Buttons"]
+offset_left = 1036.0
+offset_top = 555.0
+offset_right = 1134.0
+offset_bottom = 670.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+text = " 9 "
+
+[node name="Erase" type="Node2D" parent="Buttons"]
+
+[node name="Backspace" type="Button" parent="Buttons/Erase"]
+offset_left = 777.0
+offset_top = 89.0
+offset_right = 966.0
+offset_bottom = 203.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 90
+text = "  ⌫  "
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Erase"]
+visible = false
+position = Vector2(871.25, 145.5)
+scale = Vector2(0.997355, 0.991228)
+texture = ExtResource("5_ut6qa")
+
+[node name="Back" type="Node2D" parent="Buttons"]
+position = Vector2(1232, 79)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/Back"]
+texture = ExtResource("6_difr3")
+
+[node name="Back" type="Button" parent="Buttons/Back"]
+offset_left = -64.0
+offset_top = -48.0
+offset_right = 64.0
+offset_bottom = 48.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_hover_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_focus_color = Color(1, 0.690196, 0.639216, 1)
+theme_override_colors/font_color = Color(1, 0.411765, 0.45098, 1)
+theme_override_fonts/font = ExtResource("4_i0amk")
+theme_override_font_sizes/font_size = 100
+
+[node name="Quit_or_not" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Quit_or_not"]
+position = Vector2(683, 384)
+texture = ExtResource("7_rx17c")
+
+[node name="Yes" type="Button" parent="Quit_or_not"]
+offset_left = 435.0
+offset_top = 432.0
+offset_right = 658.0
+offset_bottom = 526.0
+
+[node name="No" type="Button" parent="Quit_or_not"]
+offset_left = 683.0
+offset_top = 432.0
+offset_right = 932.0
+offset_bottom = 526.0
+
 [connection signal="pressed" from="Buttons/1" to="." method="_on__pressed_1"]
 [connection signal="pressed" from="Buttons/2" to="." method="_on__pressed_2"]
 [connection signal="pressed" from="Buttons/3" to="." method="_on__pressed_3"]
@@ -985,4 +1030,7 @@ theme_override_font_sizes/font_size = 70
 [connection signal="pressed" from="Buttons/7" to="." method="_on__pressed_7"]
 [connection signal="pressed" from="Buttons/8" to="." method="_on__pressed_8"]
 [connection signal="pressed" from="Buttons/9" to="." method="_on__pressed_9"]
-[connection signal="pressed" from="Buttons/Backspace" to="." method="_on__pressed_backspace"]
+[connection signal="pressed" from="Buttons/Erase/Backspace" to="." method="_on__pressed_backspace"]
+[connection signal="button_up" from="Buttons/Back/Back" to="." method="_on_back_button_up"]
+[connection signal="button_up" from="Quit_or_not/Yes" to="." method="_back_button"]
+[connection signal="button_down" from="Quit_or_not/No" to="." method="_on_no_button_down"]
