@@ -107,6 +107,12 @@ func _input(event: InputEvent) -> void:
 				#$Selected.position = active.position
 				print(active)
 
+#region NEED
+#	Проверка решено или нет
+#	
+	
+
+
 
 #region Сигналы с кнопок
 func _on__pressed_1() -> void:
@@ -198,3 +204,6 @@ func _on_back_button_up() -> void:
 
 func _on_no_button_down() -> void:
 	$Quit_or_not.visible = false
+	
+	
+	
